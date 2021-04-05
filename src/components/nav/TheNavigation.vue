@@ -3,7 +3,6 @@
     <nav>
       <ul>
         <li>
-          <!-- <button>Teams</button> -->
           <router-link to="/teams">Teams</router-link>
         </li>
         <li>
@@ -40,8 +39,8 @@ li {
 }
 
 a {
-  background: transparent;
   text-decoration: none;
+  background: transparent;
   border: 1px solid transparent;
   cursor: pointer;
   color: white;
@@ -51,7 +50,7 @@ a {
 
 a:hover,
 a:active,
-a.router-link-active {
+a.active {
   color: #f1a80a;
   border-color: #f1a80a;
   background-color: #1a037e;
