@@ -34,7 +34,11 @@ const router = createRouter({
       components: {
         default: UsersList,
         footer: UsersFooter
-      }
+      }.beforeEnter((to, from, next) => {
+        console.log('ROUTE LEVEL GAURD');
+        console.log(to, from);
+        next();
+      })
     },
 
     { path: '/:notFound(.*)', component: NotFound }
@@ -49,6 +53,16 @@ const router = createRouter({
       top: 0
     };
   }
+});
+
+router.beforeEach((to, from, next) => {
+  console.log('GLOBAL GAURD');
+  console.log(to, from);
+  next();
+});
+
+router.afterEach((to, from) => {
+  console.log(to, from);
 });
 
 const app = createApp(App);
