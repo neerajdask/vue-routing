@@ -24,8 +24,13 @@ export default {
       };
     },
   },
-  beforRouteEnter(to, from, next) {
+  beforeRouteEnter(to, from, next) {
     console.log('COMPONENT LEVEL GAURD');
+    console.log(to, from);
+    next();
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log('COMPONENT LEVEL DEACTIVATE GAURD');
     console.log(to, from);
     next();
   },
