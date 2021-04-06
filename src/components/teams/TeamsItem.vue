@@ -24,6 +24,11 @@ export default {
       };
     },
   },
+  beforRouteEnter(to, from, next) {
+    console.log('COMPONENT LEVEL GAURD');
+    console.log(to, from);
+    next();
+  },
 };
 </script>
 
